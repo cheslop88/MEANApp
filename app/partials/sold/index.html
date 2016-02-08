@@ -1,22 +1,25 @@
 <div class="stockList" ng-show="car.sold === true" ng-repeat="car in cars">
-  <div class="row">
-    <div class="carInfo col-md-5 col-sm-12">
-      <h2>{{car.make}}&nbsp;{{car.model}}</h2>
-      <h3>{{car.price | currency:'£':0}}</h3>
-      <a href="#">
-        <a class="lightbox" ng-href="{{car.image}}"><img class="carImage" ng-src="{{car.image}}" height:"200" width="350"></a>
-      </a>
-    </div>
-    <div class="carContent col-md-7 col-sm-12">
-      <p><strong>Mileage:</strong>&nbsp;{{car.mileage | number}}</p>
-      <p><strong>Year Registered:</strong>&nbsp;{{car.year}}</p>
-      <p><strong>Number of Owners:</strong>&nbsp;{{car.owners}}</p>
-      <p><strong>Transmission:</strong>&nbsp;{{car.transmission}}</p>
-      <p><strong>Engine Size:</strong>&nbsp;{{car.engine}}</p>
-      <p><strong>Fuel:</strong>&nbsp;{{car.fuel}}</p>
-      <p><strong>Colour:</strong>&nbsp;{{car.colour}}</p>
-      <p><strong>Interior:</strong>&nbsp;{{car.interior}}</p>
-      <p><strong>Location:</strong>&nbsp;{{car.location}}</p>
+    <!-- Contain each record on 1 row -->
+    <div class="row">
+      <div class="col-md-8 col-sm-12">
+          <div class="carInfo">
+             <h2>{{car.length}}</h2>
+             <h2>{{car.make}}&nbsp;{{car.model}}</h2>
+            </div>
+         <a class="lightbox" ng-href="{{car.image}}"><img class="carImage" ng-src="{{car.image}}" height:"300" width="450"></a>
+      </div>
+      <div class="carContent col-md-4 col-sm-12">
+          <p><strong>Mileage:</strong>&nbsp;{{car.mileage | number}}</p>
+          <p><strong>Year Registered:</strong>&nbsp;{{car.year}}</p>
+          <p><strong>Number of Owners:</strong>&nbsp;{{car.owners}}</p>
+          <p><strong>Transmission:</strong>&nbsp;{{car.transmission}}</p>
+          <p><strong>Engine Size:</strong>&nbsp;{{car.engine}}</p>
+          <p><strong>Fuel:</strong>&nbsp;{{car.fuel}}</p>
+          <p><strong>Colour:</strong>&nbsp;{{car.colour}}</p>
+          <p><strong>Interior:</strong>&nbsp;{{car.interior}}</p>
+          <p><strong>Location:</strong>&nbsp;{{car.location}}</p>
+          </div>
+          <hr>
+       </div>
     </div>
   </div>
-</div>

@@ -2,10 +2,10 @@
 <div class="carSearchForm">
   <car-search></car-search>
 </div>
-<!-- Project One -->
+<h3>Currently showing&nbsp;{{(cars|filter: Query).length}}&nbsp;result(s)</h3>
   <div class="stockList">
+    <!-- Contain each record on 1 row -->
     <div class="row" ng-hide="car.sold === true" ng-repeat="car in cars | filter: Query as result">
-      <span ng-show="(cars| filter:Query).length == 0">Nothing here!</span>
       <div class="col-md-8 col-sm-12">
           <div class="carInfo">
              <h2>{{car.length}}</h2>
@@ -27,7 +27,7 @@
           <p><strong>Interior:</strong>&nbsp;{{car.interior}}</p>
           <p><strong>Location:</strong>&nbsp;{{car.location}}</p>
           <a class="button" href="#/cars/{{car.id}}" >Click for more information</a>
-          <a class="button" href="#/enquire/{{car.id}}" >Enquire</a>
+          <a class="button" href="#/enquire/{{car.id}}" >Enquire</a> 
           </div>
           <hr>
        </div>
