@@ -1,0 +1,30 @@
+<div class="specification">
+	<h1>{{car.model}}</h1>
+	<img ng-src="{{car.image}}" class="carImage" alt="Description" height:"400" width="700"/>
+    <h3>{{car.price | currency:'£':0}}</h3>
+     <h4 class="discount" ng-show="car.discount">Was&nbsp;{{car.price + car.discount | currency:'£':0}}</h4>
+    <h5 ng-show="car.message"><i>{{car.message}}</i></h5>
+    <h6><i>{{car.description}}</i><h6>
+    <p><strong>Mileage:</strong>&nbsp;{{car.mileage | number}}</p>
+    <p><strong>Year Registered:</strong>&nbsp;{{car.year}}</p>
+    <p><strong>Number of Owners:</strong>&nbsp;{{car.owners}}</p>
+    <p><strong>Transmission:</strong>&nbsp;{{car.transmission}}</p>
+    <p><strong>Engine Size:</strong>&nbsp;{{car.engine}}</p>
+    <p><strong>Fuel:</strong>&nbsp;{{car.fuel}}</p>
+    <p><strong>Colour:</strong>&nbsp;{{car.colour}}</p>
+    <p><strong>Interior:</strong>&nbsp;{{car.interior}}</p>
+    <p><strong>Location:</strong>&nbsp;{{car.location}}</p>
+    <a class="button" href="#/enquire/{{car.id}}" >Enquire</a>
+    <a id="financeButton" class="button" ng-click="hiddenDiv = !hiddenDiv" type="button">Check out the finance options</a>
+    <div ng-show="hiddenDiv">
+       <h1>Finance Options</h1>
+       <h4>36 Months</h4>
+       <p><strong>Deposit:</strong>&nbsp;{{(car.price/100) * 20 | currency:'£':0}}</p>
+       <p><strong>Monthly Amount:</strong>&nbsp;{{(((car.price/100) * 80)/36) * 1.15 | currency:'£':0}}</p>
+       <p><strong>Total Amount Repayable:</strong>&nbsp;{{car.price * 1.15 | currency:'£':0}}</p>
+       <h4>48 Months</h4>
+       <p><strong>Deposit:</strong>&nbsp;{{(car.price/100) * 25 | currency:'£':0}}</p>
+       <p><strong>Monthly Amount:</strong>&nbsp;{{(((car.price/100) * 75)/48) * 1.20 | currency:'£':0}}</p>
+       <p><strong>Total Amount Repayable:</strong>&nbsp;{{car.price * 1.20 | currency:'£':0}}</p>
+    </div>
+</div>

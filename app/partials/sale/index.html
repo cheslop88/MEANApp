@@ -1,0 +1,26 @@
+<div class="stockList" ng-show="car.sale === true" ng-repeat="car in cars">
+  <div class="row">
+    <div class="carInfo col-md-7 col-sm-12">
+        <h2 class="list-group-item-heading">{{car.make}}&nbsp;{{car.model}}</h2>
+        <h3 class="list-group-item-heading">{{car.price | currency:'£':0}}</h3>
+        <h4 class="list-group-item-heading discount" ng-show="car.discount">Was&nbsp;{{car.price + car.discount | currency:'£':0}}</h4>
+        <h5 class="list-group-item-heading" ng-show="car.message"><i>{{car.message}}</i></h5>
+        <a href="#">
+          <img ng-src="{{car.image}}" class="carImage" alt="Description" height:"200" width="350"/>
+        </a>
+    </div>
+    <div class="carContent col-md-5 col-sm-12">
+      <p class="list-group-item-text"><strong>Mileage:</strong>&nbsp;{{car.mileage | number}}</p>
+      <p class="list-group-item-text"><strong>Year Registered:</strong>&nbsp;{{car.year}}</p>
+      <p class="list-group-item-text"><strong>Number of Owners:</strong>&nbsp;{{car.owners}}</p>
+      <p class="list-group-item-text"><strong>Transmission:</strong>&nbsp;{{car.transmission}}</p>
+      <p class="list-group-item-text"><strong>Engine Size:</strong>&nbsp;{{car.engine}}</p>
+      <p class="list-group-item-text"><strong>Fuel:</strong>&nbsp;{{car.fuel}}</p>
+      <p class="list-group-item-text"><strong>Colour:</strong>&nbsp;{{car.colour}}</p>
+      <p class="list-group-item-text"><strong>Interior:</strong>&nbsp;{{car.interior}}</p>
+      <p class="list-group-item-text"><strong>Location:</strong>&nbsp;{{car.location}}</p>
+      <a class="button" href="#/cars/{{car.id}}" >Click for more information</a>
+      <a class="button" href="#/enquire/{{car.id}}" >Enquire</a>
+    </div>
+  </div>
+</div>
