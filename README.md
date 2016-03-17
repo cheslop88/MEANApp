@@ -29,10 +29,10 @@ Admin:
 
 Under the admin panel the user can implement the following:
 
-i) Add a new car record using the add record form - new cars are automatically set to unsold and a timestamp of record addition is added (this is unchangeable).
-ii) Update any existing cars information previously added - note user can set the car status here to sold or unsold
-iii) Delete a specific car record
-iv) View sold cars, as well as previous advert and information regarding the car
+1. Add a new car record using the add record form - new cars are automatically set to unsold and a timestamp of record addition is added (this is unchangeable).
+2. Update any existing cars information previously added - note user can set the car status here to sold or unsold
+3. Delete a specific car record
+4. View sold cars, as well as previous advert and information regarding the car
 
 Note: App relies on an npm install of angular to work
 
