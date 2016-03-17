@@ -1,6 +1,8 @@
 # MEANApp
 A sample MEAN App
 
+* This app is no means connected or affiliated to Porsche
+
 To use this app:
 
 1. Please clone repository into your local directory.
