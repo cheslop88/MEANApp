@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/stock', function(err){
 	if(err) {
-		console.log('Failed connecting to Mondodb!');
+		console.log('Failed connecting to Mongodb!');
 	} else {
 		console.log('Successful mongodb connection');
 	}
