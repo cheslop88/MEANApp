@@ -8,7 +8,7 @@ To use this app:
 1. Please clone repository into your local directory.
 2. Inside MEANApp/ please run 'npm install' to gather all modules and dependencies.
 3. Please run mongodb using mongod command. (Note: Mac users may need to use 'sudo mongod').
-4. To run, it is advised to use nodemon by using the command 'nodemon' inside of the /MEANApp directory. (Please ensure this is installed 'npm install nodemon -g'). Note: Other means of running the app are also available.
+4. To run, it is advised to use nodemon by using the command 'nodemon' inside of the /MEANApp directory. (Please ensure this is installed 'npm install nodemon -g'). Note: Other means of running the app are also available (node src/app.js).
 5. Page will be accessible at localhost:3000 - please note mongod must be successfully running for this to work.
 
 To Update Data:
