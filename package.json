@@ -5,7 +5,7 @@
   "description": "An example Porsche Website",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cheslop88/exampleMEANApp.git"
+    "url": "https://github.com/cheslop88/MEANApp.git"
   },
   "license": "MIT",
   "devDependencies": {
@@ -42,9 +42,9 @@
     "update-index-async": "node -e \"require('shelljs/global'); sed('-i', /\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/, '//@@NG_LOADER_START@@\\n' + sed(/sourceMappingURL=angular-loader.min.js.map/,'sourceMappingURL=bower_components/angular-loader/angular-loader.min.js.map','app/bower_components/angular-loader/angular-loader.min.js') + '\\n//@@NG_LOADER_END@@', 'app/index-async.html');\""
   },
   "bugs": {
-    "url": "https://github.com/cheslop88/exampleMEANApp/issues"
+    "url": "https://github.com/cheslop88/MEANApp/issues"
   },
-  "homepage": "https://github.com/cheslop88/exampleMEANApp#readme",
+  "homepage": "https://github.com/cheslop88/MEANApp#readme",
   "main": "src/app.js",
   "dependencies": {
     "body-parser": "1.15.0",
