@@ -1,0 +1,22 @@
+<div class="row">
+    <h3>Currently showing&nbsp;{{(cars | filter: !car.sold).length}}&nbsp;result(s)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Ref No:</th>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Commission</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Display all bets in alphabetical order of team/ we want to filter by event if option chosen by user -->
+            <tr ng-show="car.sold === true" ng-repeat="car in cars">
+                <td class="sold"><a ng-href="#/cars/{{car._id}}" >{{car._id}}</a></td>
+                <td class="sold">{{car.model}}</td>
+                <td class="sold">{{car.year}}</td>
+                <td class="sold">{{(car.price*1.05) - (car.price) | currency:'£':0}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

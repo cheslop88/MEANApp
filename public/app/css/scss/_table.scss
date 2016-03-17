@@ -1,0 +1,87 @@
+/* Table Styles */
+
+table { 
+  width: 100%; 
+  margin: 0 auto;
+  border-collapse: collapse; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: $light-grey; 
+}
+th { 
+  background: #000; 
+  color: $white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid $grey; 
+  text-align: center; 
+}
+
+@media 
+only screen and (max-width: $min-device-width),
+(min-device-width: $min-device-width) and (max-device-width: $max-width)  {
+
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr { 
+    display: block; 
+  }
+  
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  tr { border: 1px solid $grey; }
+  
+  td { 
+    /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid $light-grey; 
+      position: relative;
+      padding-left: 50%; 
+      &:before { 
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%; 
+      padding-right: 10px; 
+      white-space: nowrap;
+    }
+  }
+  
+  /*
+  Data Labels
+  */
+  .admin {
+    &:nth-of-type(1):before { content: "Ref No"; }
+    &:nth-of-type(2):before { content: "Model"; }
+    &:nth-of-type(3):before { content: "Year"; }
+    &:nth-of-type(4):before { content: "Sold"; }
+    &:nth-of-type(5):before { content: "Sold"; }
+    &:nth-of-type(6):before { content: "Edit"; }
+    &:nth-of-type(7):before { content: "Delete"; }
+  }
+  .stock {
+    &:nth-of-type(1):before { content: ""; }
+    &:nth-of-type(2):before { content: "Model"; }
+    &:nth-of-type(3):before { content: "Price"; }
+    &:nth-of-type(4):before { content: "Mileage"; }
+    &:nth-of-type(5):before { content: "Year Registered"; }
+    &:nth-of-type(6):before { content: "Ref No"; }
+    &:nth-of-type(7):before { content: "Date Added"; }
+    &:nth-of-type(8):before { content: "More Information"; }
+  }
+  .sold {
+    &:nth-of-type(1):before { content: "Ref No"; }
+    &:nth-of-type(2):before { content: "Model"; }
+    &:nth-of-type(3):before { content: "Year"; }
+    &:nth-of-type(4):before { content: "Commission"; }
+  }
+}

@@ -1,0 +1,39 @@
+<form class="carSearch" ng-show="newDiv" name="searchForm">
+    <p>Use the form below to help you filter results to find your perfect match</p>
+    <div class="searchField">
+        <label for="carModel">Model:</label>&nbsp;
+        <select name="carModel" id="carModel" ng-model="Query.model">
+            <option value="">Select Option</option>
+            <option ng-if="car.sold != true" ng-repeat="car in cars | orderBy:'model' | unique:'model'" value="{{car.model}}">{{car.model}}</option>
+        </select>
+    </div>
+    <div class="searchField">
+        <label for="carAge">Age:</label>&nbsp;
+        <select name="carAge" id="carAge" ng-model="Query.year">
+            <option value="">Select Option</option>
+            <option ng-if="car.sold != true" ng-repeat="car in cars | orderBy:'year' | unique:'year'" value="{{car.year}}">{{2016 - car.year}}&nbsp;year(s) old</option>
+        </select>
+    </div>
+    <div class="searchField">
+        <label for="carEngine">Engine:</label>&nbsp;
+        <select name="carEngine" id="carEngine" ng-model="Query.engine">
+            <option value="">Select Option</option>
+            <option ng-if="car.sold != true" ng-repeat="car in cars | orderBy:'engine' | unique:'engine'" value="{{car.engine}}">{{car.engine}}</option>
+        </select>
+    </div>
+    <div class="searchField">
+        <label for="carTransmission">Transmission:</label>&nbsp;
+        <select name="carTransmission" id="carTransmission" ng-model="Query.transmission">
+            <option value="">Select Option</option>
+            <option ng-if="car.sold != true" ng-repeat="car in cars | orderBy:'transmission' | unique:'transmission'" value="{{car.transmission}}">{{car.transmission}}</option>
+        </select>
+    </div>
+    <div class="searchField">
+        <label for="carLocation">Location:</label>&nbsp;
+        <select name="carLocation" id="carLocation" ng-model="Query.location">
+            <option value="">Select Option</option>
+            <option ng-if="car.sold != true" ng-repeat="car in cars | orderBy:'location' | unique:'location'" value="{{car.location}}">{{car.location}}</option>
+        </select>
+    </div>
+    <a class="button" id="clear-filter" ng-click="clearFilter()" type="button">Clear Filter</a>
+</form>

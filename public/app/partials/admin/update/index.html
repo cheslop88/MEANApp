@@ -1,0 +1,83 @@
+<h2>Update Record</h2>
+<div ng-show="updated === false" class="alert alert-danger">
+    <strong>Error!</strong>&nbsp;Failed to update record, please try again
+</div>
+<form id="update">
+    <div class="input-group input-group-md">
+        <span class="input-group-addon" id="model">Model:</span>
+        <input type="text" class="form-control" ng-model="car.model" name="model" required>
+    </div>
+    <div class="input-group input-group-md">
+        <span class="input-group-addon" id="mileage">Mileage:</span>
+        <input type="number" class="form-control" ng-model="car.mileage" min="1" max="1000000" name="mileage" required>
+    </div>
+    <div class="input-group input-group-md">
+        <span class="input-group-addon" id="owners">Owners:</span>
+        <input class="form-control" min="1" max="9" type="number" ng-model="car.owners" name="owners" required>
+    </div>
+    <div class="input-group input-group-md">
+        <span class="input-group-addon" id="year">Year:</span>
+        <input class="form-control" pattern="[0-9]{4}" type="number" min="1950" max="2016" ng-model="car.year" required>
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon" id="transmission">Transmission:</span>
+        <select class="form-control" ng-model="car.transmission"required>
+            <option value="Automatic">Automatic</option>
+            <option value="Semi-Automatic">Semi-Automatic</option>
+            <option value="Manual">Manual</option>
+            <option value="Hybrid">Hybrid</option>
+        </select>
+    </div>
+    <div class="input-group input-group-md">
+        <span class="input-group-addon" id="engine">Engine:</span>
+        <input class="form-control" pattern="[0-9]+([,\.][0-9]+)?" type="number" ng-model="car.engine" name="engine" required>
+    </div>
+    <div class="input-group input-group-md">
+        <span class="input-group-addon" id="image">Image:</span>
+        <input class="form-control" type="text" ng-model="car.image" name="image" required>
+        <!-- Live image preview -->
+        <img ng-src="/images/cars/{{car.image}}" alt="{{car.model}}" height:"100" width="150"/>
+    </div>
+    <div class="input-group input-group-md">
+        <span class="input-group-addon" id="price">Price:</span>
+        <input class="form-control" type="number" min="1" max="99000000" ng-model="car.price" name="price" required>
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon" id="fuel">Fuel:</span>
+        <select class="form-control" ng-model="car.fuel" required>
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Electric">Electric</option>
+            <option value="Hybrid">Hybrid</option>
+        </select>
+    </div>
+    <div class="input-group input-group-md">
+        <span class="input-group-addon" id="colour">Colour:</span>
+        <input type="text" class="form-control" ng-model="car.colour" name="colour" required>
+    </div>
+    <div class="input-group input-group-md">
+        <span class="input-group-addon" id="location">Location:</span>
+        <input type="text" class="form-control" ng-model="car.location" name="location" required>
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon" id="interior">Interior:</span>
+        <select class="form-control" ng-model="car.interior"required>
+            <option value="Full Leather">Full Leather</option>
+            <option value="Faux Leather">Faux Leather</option>
+            <option value="Alcantara">Alcantara</option>
+            <option value="Half Leather">Half Leather</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon" id="sold">Sold:</span>
+        <select class="form-control" ng-model="car.sold" required>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon" id="added">Date Added:</span>
+        <input type="text" class="form-control" ng-model="car.added | date:'dd/MM/yyyy h:mma'" name="added" disabled>
+    </div>
+    <a class="button" ng-hide="!car.model || !car.mileage || !car.owners|| !car.year || !car.transmission || !car.engine || !car.image|| !car.price || !car.sold || !car.fuel || !car.colour || !car.location || !car.interior | !car.added" ng-click="update()">Update<a> 
+</form>

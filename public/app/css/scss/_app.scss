@@ -1,0 +1,117 @@
+/* app css stylesheet */
+body {
+  background-color: $white;
+}
+
+.container-fluid {
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.nav-pills {
+  text-align: left;
+  li {
+    width: 20%;
+    @media 
+      only screen and (max-width: $min-device-width),
+      (min-device-width: $min-device-width) and (max-device-width: $max-width)  {
+        width: 24%;
+    }
+  }
+  a {
+      text-align: center;
+      color: $grey;
+  }
+  &>li.active> {
+    a {
+          background-color: $button-red;
+          color: $button-text;
+        &:focus{
+          background-color: $button-red;
+          color: $button-text;
+        }
+        &:hover{
+          background-color: $button-red;
+          color: $button-text; 
+        }
+      }
+  }
+}
+
+footer {
+  background-color: #1b1d1f;
+  color: #FFF;
+  padding-top: 2%;
+  p {
+    text-align: center;
+  }
+  ul {
+   text-decoration: none;
+   list-style-type: none;
+   text-align:center;
+   li{
+     display:inline-block;
+     padding-left: 2%;
+     padding-right: 2%;
+     text-align: center;
+     a {
+       color: #F1F1F1;
+     }
+   }
+  }
+}
+
+.porscheLogo {
+  text-align: center;
+  width: 320px;
+}
+
+/* form input valid/invalid indication */
+input{
+  &.ng-valid.ng-touched {
+    background-color: $valid-color;
+  }
+  &.ng-invalid.ng-touched {
+    background-color: $error-color;
+  }
+}
+
+.pageContent {
+  padding:1%;
+}
+
+.carSearch {
+  border-radius: 10px;
+  border: 2px solid #C0C0C0;
+  padding: 10px; 
+  background-color: #FFF;
+  width: 100%;
+  .searchField {
+    display: inline-block;
+  }
+}
+.carImage {
+  float: left;
+  text-align: center;
+  width: $max-percent-width;
+}
+
+a {
+    &.button {
+      background-color: $button-red;
+      font-color: $button-text;
+      padding: 10px;
+      margin: 10px 0;
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      display: inline-block;
+      box-shadow: 0 10px 10px rgba(0,40,100,0.15);
+      text-align: center;
+      &:hover {
+        background-color: $hover-red;
+        color: $button-text;
+        cursor: pointer;
+      }
+  }
+}

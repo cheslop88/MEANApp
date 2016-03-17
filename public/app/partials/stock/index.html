@@ -1,0 +1,36 @@
+<a id="showSearch" class="button" ng-click="newDiv = !newDiv" ng-show="!newDiv" type="button">Show Search Options</a>
+<a id="showSearch" class="button" ng-click="newDiv = !newDiv" ng-show="newDiv" type="button">Hide Search Options</a>
+<div class="carSearchForm">
+    <car-search></car-search>
+</div>
+<div class="pageContent">
+    <h3>Currently showing&nbsp;{{(cars|filter: Query | filter: car.sold === true).length}}&nbsp;result(s)</h3>
+    <hr />
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Model</th>
+                <th>Price</th>
+                <th>Mileage</th>
+                <th>Year Registered</th>
+                <th>Ref No</th>
+                <th>Date Added</th>
+                <th>More Information</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Display all bets in alphabetical order of team/ we want to filter by event if option chosen by user -->
+            <tr ng-repeat="car in cars | orderBy:'-added'| filter: Query as result" ng-hide="car.sold === true">
+                <td class="stock"><img height="75" width="100" ng-src="images/cars/{{car.image}}" alt="{{car.model}}"></td>
+                <td class="stock">{{car.model}}</td>
+                <td class="stock">{{car.price | currency:'£':0}}</td>
+                <td class="stock">{{car.mileage | number}}</td>
+                <td class="stock">{{car.year}}</td>
+                <td class="stock">{{car._id}}</td>
+                <td class="stock">{{car.added | date:"dd/MM/yyyy  h:mma"}}</td>
+                <td class="stock"><a class="button" ng-href="#/cars/{{car._id}}" >More information</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

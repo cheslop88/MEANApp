@@ -1,0 +1,188 @@
+/* app css stylesheet */
+body {
+  background-color: #FFFFFF; }
+
+.container-fluid {
+  padding-left: 1%;
+  padding-right: 1%; }
+
+.nav-pills {
+  text-align: left; }
+  .nav-pills li {
+    width: 20%; }
+    @media only screen and (max-width: 768px), (min-device-width: 768px) and (max-device-width: 1024px) {
+      .nav-pills li {
+        width: 24%; } }
+  .nav-pills a {
+    text-align: center;
+    color: #D3D3D3; }
+  .nav-pills > li.active > a {
+    background-color: #B53333;
+    color: #F1F1F1; }
+    .nav-pills > li.active > a:focus {
+      background-color: #B53333;
+      color: #F1F1F1; }
+    .nav-pills > li.active > a:hover {
+      background-color: #B53333;
+      color: #F1F1F1; }
+
+footer {
+  background-color: #1b1d1f;
+  color: #FFF;
+  padding-top: 2%; }
+  footer p {
+    text-align: center; }
+  footer ul {
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center; }
+    footer ul li {
+      display: inline-block;
+      padding-left: 2%;
+      padding-right: 2%;
+      text-align: center; }
+      footer ul li a {
+        color: #F1F1F1; }
+
+.porscheLogo {
+  text-align: center;
+  width: 320px; }
+
+/* form input valid/invalid indication */
+input.ng-valid.ng-touched {
+  background-color: #78FA89; }
+
+input.ng-invalid.ng-touched {
+  background-color: #FA787E; }
+
+.pageContent {
+  padding: 1%; }
+
+.carSearch {
+  border-radius: 10px;
+  border: 2px solid #C0C0C0;
+  padding: 10px;
+  background-color: #FFF;
+  width: 100%; }
+  .carSearch .searchField {
+    display: inline-block; }
+
+.carImage {
+  float: left;
+  text-align: center;
+  width: 100%; }
+
+a.button {
+  background-color: #B53333;
+  font-color: #F1F1F1;
+  padding: 10px;
+  margin: 10px 0;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  display: inline-block;
+  box-shadow: 0 10px 10px rgba(0, 40, 100, 0.15);
+  text-align: center; }
+  a.button:hover {
+    background-color: #cc0000;
+    color: #F1F1F1;
+    cursor: pointer; }
+
+/* Table Styles */
+table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse; }
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+  background: #EEEEEE; }
+
+th {
+  background: #000;
+  color: #FFFFFF;
+  font-weight: bold; }
+
+td, th {
+  padding: 6px;
+  border: 1px solid #D3D3D3;
+  text-align: center; }
+
+@media only screen and (max-width: 768px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr {
+    display: block; }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px; }
+  tr {
+    border: 1px solid #D3D3D3; }
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #EEEEEE;
+    position: relative;
+    padding-left: 50%; }
+    td:before {
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap; }
+  /*
+  Data Labels
+  */
+  .admin:nth-of-type(1):before {
+    content: "Ref No"; }
+  .admin:nth-of-type(2):before {
+    content: "Model"; }
+  .admin:nth-of-type(3):before {
+    content: "Year"; }
+  .admin:nth-of-type(4):before {
+    content: "Sold"; }
+  .admin:nth-of-type(5):before {
+    content: "Sold"; }
+  .admin:nth-of-type(6):before {
+    content: "Edit"; }
+  .admin:nth-of-type(7):before {
+    content: "Delete"; }
+  .stock:nth-of-type(1):before {
+    content: ""; }
+  .stock:nth-of-type(2):before {
+    content: "Model"; }
+  .stock:nth-of-type(3):before {
+    content: "Price"; }
+  .stock:nth-of-type(4):before {
+    content: "Mileage"; }
+  .stock:nth-of-type(5):before {
+    content: "Year Registered"; }
+  .stock:nth-of-type(6):before {
+    content: "Ref No"; }
+  .stock:nth-of-type(7):before {
+    content: "Date Added"; }
+  .stock:nth-of-type(8):before {
+    content: "More Information"; }
+  .sold:nth-of-type(1):before {
+    content: "Ref No"; }
+  .sold:nth-of-type(2):before {
+    content: "Model"; }
+  .sold:nth-of-type(3):before {
+    content: "Year"; }
+  .sold:nth-of-type(4):before {
+    content: "Commission"; } }
+
+#owl-demo .item {
+  margin: 3px; }
+  #owl-demo .item img {
+    display: block;
+    width: 100%;
+    height: 200px; }
+
+/*# sourceMappingURL=min/main.css.map */
+
+/*# sourceMappingURL=min/main.css.map */
