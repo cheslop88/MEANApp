@@ -5,33 +5,7 @@ $(document).on("click", ".nav-pills li a", function () {
     $(".nav-pills").find(".active").removeClass("active");
     $(this).parent().addClass("active");
 });
-
-/* Lightbox */
-var $overlay = $('<div id="overlay"></div>');
-var $image = $("<img>");
-
-//An image to overlay
-$overlay.append($image);
-
-//Add overlay
-$("body").append($overlay);
-//Capture the click event on a link to an image
-$(document).on("click", "a.lightbox", function (event) {
-    event.preventDefault();
-    var srcVar = $(this).find("img").attr("ng-src");
-    //Update overlay with the image linked in the link
-    $image.attr("src", srcVar);
-    $overlay.show();
-    $("body").addClass("fixedBackground");
-});
-
-//When overlay is clicked
-$overlay.click(function () {
-    //Hide the overlay
-    $overlay.hide();
-    $("body").removeClass("fixedBackground");
-});
-
+/* Carousel settings */
 $(document).ready(function() {
   $("#owl-demo").owlCarousel({
     autoPlay: 3000, //Set AutoPlay to 3 seconds
