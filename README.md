@@ -23,7 +23,7 @@ To Update Data:
 8. User can now amend data within the app as designed
 9. Alternatively, use the app's features to input data using the designated forms and inputs
 
-Note: Images have been provided for cars located at - public/app/images/cars - any additional car images you require must be placed into this directory.
+Note: Images have been provided for cars located at - public/app/images/cars - this path is not required during input, just the file name within that directory - any additional car images you require must be placed into this directory.
 
 Admin:
 
